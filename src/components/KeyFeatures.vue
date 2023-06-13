@@ -1,5 +1,5 @@
 <template>
-  <div class="p-medium text-dark" id="key-features">
+  <div class="p-medium pt-[9.6rem] text-dark" id="key-features">
     <div class="mx-auto my-medium w-1/2 text-center">
       <h2 class="text-[3.6rem] font-bold">Key Features</h2>
       <p class="my-small">

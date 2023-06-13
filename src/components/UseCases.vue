@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#F2FAFA] py-medium text-dark" id="use-cases">
+  <div class="bg-[#F2FAFA] py-medium pt-[9.6rem] text-dark" id="use-cases">
     <div class="mx-auto w-3/5 text-center">
       <h2 class="text-small font-bold">Use Cases</h2>
       <p class="my-thin w-full">

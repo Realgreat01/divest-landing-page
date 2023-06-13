@@ -1,8 +1,9 @@
 <template>
   <div
-    class="grid max-h-[85rem] min-h-[50rem] w-full grid-cols-2 items-center justify-around bg-[#F1F9F9] px-medium"
+    id="about"
+    class="grid max-h-[85rem] min-h-[50rem] w-full grid-cols-2 items-center justify-around bg-[#F1F9F9] px-medium pt-[9.6rem]"
   >
-    <div class="" id="about">
+    <div class="">
       <img src="../assets/about-icon.png" alt="" class="" />
     </div>
     <div class="text-dark">
