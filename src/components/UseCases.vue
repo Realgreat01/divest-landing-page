@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="mx-auto grid w-4/5 grid-cols-2 items-center">
+    <div class="mx-auto grid w-4/5 grid-cols-2 items-center duration-1000">
       <img :src="activeUsecase.image" alt="" class="block" />
       <div class="flex flex-col gap-medium-lite">
         <div

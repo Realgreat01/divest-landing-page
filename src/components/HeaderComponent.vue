@@ -1,6 +1,6 @@
 <template>
   <div
-    class="sticky top-0 grid h-[9.6rem] w-full grid-cols-[1fr,2fr,1fr] items-center gap-x-[3rem] bg-[#0D1912] px-medium-lite"
+    class="z-50 sticky top-0 grid h-[9.6rem] w-full grid-cols-[1fr,2fr,1fr] items-center gap-x-[3rem] bg-[#0D1912] px-medium-lite"
   >
     <LogoPlain />
     <div class="flex items-center justify-center gap-x-medium">

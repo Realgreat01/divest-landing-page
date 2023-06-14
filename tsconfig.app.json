@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "prettier.config.cjs"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "baseUrl": ".",
@@ -13,5 +13,5 @@
     },
     "typeRoots": ["./node_modules/@types", "./@types"]
   },
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/vue-shims.d.ts", "public/data"],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/vue-shims.d.ts", "public/data", "prettier.config.cjs"],
 }

@@ -6,6 +6,9 @@
     <KeyFeatures />
     <SupportCurrencies />
     <UseCases />
+    <FAQs />
+    <ContactUs />
+    <FooterComponent />
   </div>
 </template>
 
@@ -16,6 +19,9 @@ import AboutPage from "./components/AboutPage.vue";
 import KeyFeatures from "./components/KeyFeatures.vue";
 import SupportCurrencies from "./components/SupportCurrencies.vue";
 import UseCases from "./components/UseCases.vue";
+import FAQs from "./components/FAQs.vue";
+import ContactUs from "./components/ContactUs.vue";
+import FooterComponent from "./components/FooterComponent.vue";
 </script>
 
 <style scoped></style>
