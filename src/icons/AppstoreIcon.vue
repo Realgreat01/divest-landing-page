@@ -1,6 +1,7 @@
 <template>
   <div
-    class="flex h-medium w-[15.5rem] cursor-pointer items-center justify-between rounded-light bg-brand px-thin text-left text-white"
+    :class="Class"
+    class="flex h-medium cursor-pointer items-center justify-between rounded-light bg-brand px-thin text-left text-white"
   >
     <svg
       width="24"
@@ -21,6 +22,12 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
-
+<script setup lang="ts">
+defineProps({
+  Class: {
+    type: String,
+    default: 'w-[15.5rem]',
+  },
+});
+</script>
 <style scoped></style>

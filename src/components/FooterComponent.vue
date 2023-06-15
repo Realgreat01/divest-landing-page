@@ -1,8 +1,8 @@
 <template>
-  <div class="grid h-[40rem] grid-cols-[2fr,1.25fr,2fr] bg-dark p-medium">
+  <div class="grid bg-dark p-medium md:h-[40rem] md:grid-cols-[2fr,1.25fr,2fr]">
     <div class="flex flex-col gap-small">
       <LogoWhite />
-      <p class="max-w-[70%]">
+      <p class="md:max-w-[70%]">
         Divest simplifies the process of transferring funds. With just a few
         clicks, you can initiate a transaction and witness the power of instant
         conversion.
@@ -25,7 +25,7 @@
         Quick Links
       </h2>
       <h2
-        class="mb-small cursor-pointer text-[1.4rem] font-light"
+        class="mb-small cursor-pointer text-normal font-light"
         v-for="(link, index) in quickLinks"
         :key="index"
       >
@@ -76,10 +76,6 @@ const SocialMediaLinks = shallowRef([
   { icon: LinkedinIcon, link: '' },
   { icon: InstagramIcon, link: '' },
 ]);
-const BusinessDetails = shallowRef([
-  { icon: MailIcon, link: '' },
-  { icon: LocationIcon, link: '' },
-]);
 
 const quickLinks = ref([
   { title: 'About', route: '#about' },
@@ -88,7 +84,7 @@ const quickLinks = ref([
   { title: 'FAQs', route: '#faqs' },
 ]);
 
-const contactInformation = ref([
+const contactInformation = shallowRef([
   {
     icon: MailIcon,
     contact: 'info@divest.com',

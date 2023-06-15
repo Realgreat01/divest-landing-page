@@ -1,45 +1,45 @@
 <template>
   <div
-    class="main-landing-page grid max-h-[90vh] min-h-[88vh] w-full grid-cols-2 items-center justify-around px-medium"
+    class="main-landing-page min-h-[95vh] w-full items-center justify-center px-small-lite md:max-h-[90vh] md:grid-cols-2 md:px-medium"
   >
-    <div class="">
-      <p class="text-[6.4rem] font-bold">
-        Instant <span class="text-brand">Crypto</span> to
-        <span class="text-brand">Cash</span> Conversion
+    <div class="pt-medium md:pt-0">
+      <p class="text-[4rem] font-bold md:text-[6.4rem]">
+        Instant
+        <span class="text-brand">Crypto</span>
+        to
+        <span class="text-brand">Cash</span>
+        Conversion
       </p>
-      <p class="my-thin w-[80%] text-small-lite">
+      <p class="my-small-lite w-full text-small-lite md:w-[80%]">
         Instantly convert crypto to cash in 100 seconds or less, directly into
         your bank account!
       </p>
-      <div class="flex gap-small">
-        <AppstoreIcon />
-        <PlayStoreIcon />
-      </div>
+      <AppDownload />
     </div>
-    <div class="">
+    <div class="mt-medium flex items-center justify-center md:mt-0">
       <img
         src="../assets/landing-page-phone.png"
         alt=""
-        class="ml-auto h-[45rem] w-[45rem]"
+        class="block w-[36rem] md:ml-auto md:h-[45rem] md:w-[45rem]"
       />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { shallowRef } from "vue";
-import AppstoreIcon from "@/icons/AppstoreIcon.vue";
-import PlayStoreIcon from "@/icons/PlaystoreIcon.vue";
-import ButtonComponent from "./resuables/ButtonComponent.vue";
+import AppstoreIcon from '@/icons/AppstoreIcon.vue';
+import PlayStoreIcon from '@/icons/PlaystoreIcon.vue';
+import { shallowRef } from 'vue';
+import AppDownload from './resuables/AppDownload.vue';
 
 const actionButtons = shallowRef([
-  { icon: PlayStoreIcon, title: "Android", link: "" },
-  { icon: AppstoreIcon, title: "Iphone", link: "" },
+  { icon: PlayStoreIcon, title: 'Android', link: '' },
+  { icon: AppstoreIcon, title: 'Iphone', link: '' },
 ]);
 </script>
 
 <style scoped>
 .main-landing-page {
-  background-image: url("../assets/landing-page-background.png");
+  background-image: url('../assets/landing-page-background.png');
 }
 </style>

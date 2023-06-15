@@ -1,23 +1,23 @@
 <template>
   <div class="relative mt-medium">
-    <div class="grid h-[42rem] grid-cols-2 bg-brand p-medium">
+    <div class="grid h-[42rem] bg-brand p-medium md:grid-cols-2">
       <div class="">
         <h1 class="text-medium font-bold">Contact Us</h1>
-        <p class="max-w-[70%]">
+        <p class="mb-0 md:max-w-[70%]">
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
           officia deserunt mollit anim id es. sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id es
         </p>
       </div>
-      <ContactUsIcon class="w-[50rem]" />
+      <ContactUsIcon class="w-[32rem] md:w-[50rem]" />
     </div>
-    <div class="h-[42rem] bg-white text-dark">
+    <div class="bg-white py-medium text-dark md:h-[42rem]">
       <div
-        class="absolute left-1/2 top-1/2 mt-[10rem] flex w-full -translate-x-1/2 -translate-y-1/2 transform justify-center"
+        class="left-1/2 top-1/2 flex w-full transform justify-center md:absolute md:mt-[10rem] md:-translate-x-1/2 md:-translate-y-1/2"
       >
         <VeeForm
           v-slot="{ handleSubmit, isSubmitting, errors }"
-          class="w-1/2 rounded-thin border bg-white px-thin py-medium-lite md:px-[3.2rem] md:py-[4.8rem]"
+          class="w-4/5 rounded-thin border bg-white px-thin py-medium-lite md:w-1/2 md:px-[3.2rem] md:py-[4.8rem]"
         >
           <form
             @submit.prevent="handleSubmit($event, SEND_MESSAGE)"
@@ -75,7 +75,7 @@
                 :loading="isSubmitting"
                 :disabled="Object.keys(errors).length !== 0 || isSubmitting"
               >
-                {{ isSubmitting ? "Submitting" : "Submit" }}
+                {{ isSubmitting ? 'Submitting' : 'Submit' }}
               </ButtonComponent>
             </div>
           </form>
@@ -86,13 +86,13 @@
 </template>
 
 <script setup lang="ts">
-import ContactUsIcon from "@/icons/ContactUsIcon.vue";
-import ButtonComponent from "./resuables/ButtonComponent.vue";
-import { ErrorMessage, Field, Form as VeeForm } from "vee-validate";
-import { ref } from "vue";
+import ContactUsIcon from '@/icons/ContactUsIcon.vue';
+import { ErrorMessage, Field, Form as VeeForm } from 'vee-validate';
+import { ref } from 'vue';
+import ButtonComponent from './resuables/ButtonComponent.vue';
 
 // import axios from '@/axios';
-import * as Yup from "yup";
+import * as Yup from 'yup';
 
 const SEND_MESSAGE = async (field: object) => {
   //   try {
@@ -106,29 +106,29 @@ const SEND_MESSAGE = async (field: object) => {
 
 const detailsForm = ref([
   {
-    label: "name",
-    rules: Yup.string().required("Name is required"),
+    label: 'name',
+    rules: Yup.string().required('Name is required'),
   },
   {
-    label: "email",
+    label: 'email',
     rules: Yup.string()
-      .required("Email is required")
-      .email("Please enter a valid email"),
+      .required('Email is required')
+      .email('Please enter a valid email'),
   },
 ]);
 const contactForm = ref([
   {
-    label: "subject",
+    label: 'subject',
     rules: Yup.string()
-      .required("Subject is required")
-      .min(10, "Subject is too short"),
+      .required('Subject is required')
+      .min(10, 'Subject is too short'),
   },
   {
-    label: "message",
-    as: "textarea",
+    label: 'message',
+    as: 'textarea',
     rules: Yup.string()
-      .required("Message is required")
-      .min(24, "Message is too short"),
+      .required('Message is required')
+      .min(24, 'Message is too short'),
   },
 ]);
 </script>

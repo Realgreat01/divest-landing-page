@@ -1,6 +1,6 @@
 <template>
   <div
-    class="faqs h-fit w-full bg-white pt-[10.1rem] text-dark md:min-h-[97rem]"
+    class="faqs h-fit w-full bg-white pt-small-lite text-dark md:min-h-[97rem] md:pt-[10.1rem]"
     id="faqs"
   >
     <div class="mx-auto md:w-[51.1rem]">
@@ -39,41 +39,41 @@
 </template>
 
 <script setup lang="ts">
-import PlusIcon from "@/icons/PlusIcon.vue";
-import MinusIcon from "@/icons/MinusIcon.vue";
-import { ref } from "vue";
+import MinusIcon from '@/icons/MinusIcon.vue';
+import PlusIcon from '@/icons/PlusIcon.vue';
+import { ref } from 'vue';
 const Faqs = ref([
   {
-    question: "What is Divest ?",
+    question: 'What is Divest ?',
     answer: `Divest is a financial services company that offers businesses and individuals 
     access to global banking services, including virtual accounts in multiple currencies,
      global transfer services, and forex services`,
   },
   {
-    question: " What currencies does Divest support ?",
+    question: ' What currencies does Divest support ?',
     answer: `Divest offers virtual accounts in GBP, USD, NGN, and EUR, 
       and supports global transfers in over 50 currencies.`,
   },
   {
-    question: "How long does it take to transfer money with Divest ?",
+    question: 'How long does it take to transfer money with Divest ?',
     answer: `Transfers with Divest are typically completed within 1-3 business days, depending on the destination and currency.`,
   },
   {
-    question: " How secure is Divest ?",
+    question: ' How secure is Divest ?',
     answer: `Divest prioritizes security and reliability, using cutting-edge 
     technology and partnering with reputable financial institutions to ensure
      customer data and transactions are protected.`,
   },
   {
-    question: "What are the fees for using Divest ?",
+    question: 'What are the fees for using Divest ?',
     answer: `Divest offers competitive exchange rates and zero transfer fees for global transfers. Fees for virtual accounts and other services are available on our website and may vary by currency and service.`,
   },
   {
-    question: "What kind of customer support does Divest offer ?",
+    question: 'What kind of customer support does Divest offer ?',
     answer: `Divest offers dedicated customer support via email, phone, and chat, available during business hours. Our support team is ready to assist with any questions or concerns.`,
   },
   {
-    question: "Can Divest be used to transfer money to suppliers overseas ?",
+    question: 'Can Divest be used to transfer money to suppliers overseas ?',
     answer: ` Divest can be used to transfer money to suppliers overseas. Divest offers global cross currency transfer and forex transfer services, allowing businesses to send payments to suppliers and partners around the world.`,
   },
 ]);
@@ -81,7 +81,7 @@ const Faqs = ref([
 
 <style scoped lang="scss">
 .faqs {
-  background-image: url("../assets/faq-background.svg");
+  background-image: url('../assets/faq-background.svg');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: bottom;

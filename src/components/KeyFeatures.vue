@@ -1,41 +1,47 @@
 <template>
-  <div class="p-medium pt-[9.6rem] text-dark" id="key-features">
-    <div class="mx-auto my-medium w-1/2 text-center">
+  <div
+    class="p-small-lite text-dark md:p-medium md:pt-[9.6rem]"
+    id="key-features"
+  >
+    <div class="w-full md:mx-auto md:my-medium md:w-1/2 md:text-center">
       <h2 class="text-[3.6rem] font-bold">Key Features</h2>
       <p class="my-small">
         Divest has amazing features to enable your transactions seamless and
         stress free across the globe.
       </p>
-      <div class="mx-auto flex justify-center gap-small">
-        <PlayStoreIcon />
-        <AppstoreIcon />
-      </div>
+      <AppDownload />
     </div>
-    <div class="my-small grid grid-cols-3 text-dark">
-      <div class="w-[80%]">
+    <div
+      class="m-normal-lite my-medium grid text-dark md:my-small md:grid-cols-3"
+    >
+      <div class="order-2 w-[80%] md:order-1">
         <div
-          class="mb-small flex flex-col gap-2"
+          class="mb-small flex flex-col gap-3"
           v-for="(feature, index) in LeftSide"
           :key="index"
         >
-          <div class="w-fit rounded-thin bg-brand p-4">
+          <div
+            class="flex h-[4rem] w-[4rem] items-center justify-center rounded-[0.7rem] bg-brand"
+          >
             <component :is="feature.icon" class="" />
           </div>
           <h2 class="font-bold">{{ feature.title }}</h2>
           <h2 class="">{{ feature.content }}</h2>
         </div>
       </div>
-      <div class="">
+      <div class="order-1 mx-auto block w-4/5 md:order-2 md:w-full">
         <img src="../assets/key-features.png" alt="" />
       </div>
 
-      <div class="ml-auto w-[80%]">
+      <div class="order-3 w-[80%] md:ml-auto">
         <div
-          class="mb-small ml-auto flex flex-col gap-2 justify-self-end"
+          class="mb-small ml-auto flex flex-col gap-3 justify-self-end"
           v-for="(feature, index) in RightSide"
           :key="index"
         >
-          <div class="w-fit rounded-thin bg-brand p-4">
+          <div
+            class="flex h-[4rem] w-[4rem] items-center justify-center rounded-[0.7rem] bg-brand"
+          >
             <component :is="feature.icon" class="" />
           </div>
           <h2 class="font-bold">{{ feature.title }}</h2>
@@ -47,24 +53,23 @@
 </template>
 
 <script setup lang="ts">
-import { shallowRef } from "vue";
-import PlayStoreIcon from "@/icons/PlaystoreIcon.vue";
-import AppstoreIcon from "@/icons/AppstoreIcon.vue";
-import AssetsIcon from "@/icons/AssetsIcon.vue";
-import GlobeIcon from "@/icons/GlobeIcon.vue";
-import TransferIcon from "@/icons/TransferIcon.vue";
-import TransparentIcon from "@/icons/TransparentIcon.vue";
+import AssetsIcon from '@/icons/AssetsIcon.vue';
+import GlobeIcon from '@/icons/GlobeIcon.vue';
+import TransferIcon from '@/icons/TransferIcon.vue';
+import TransparentIcon from '@/icons/TransparentIcon.vue';
+import { shallowRef } from 'vue';
+import AppDownload from './resuables/AppDownload.vue';
 
 const LeftSide = shallowRef([
   {
     icon: TransferIcon,
-    title: "Lightning Fast Transfers",
+    title: 'Lightning Fast Transfers',
     content:
-      "Our platform can convert your crypto to cash in 100 seconds or less, giving you instant access to your funds.",
+      'Our platform can convert your crypto to cash in 100 seconds or less, giving you instant access to your funds.',
   },
   {
     icon: AssetsIcon,
-    title: "No Asset Holding",
+    title: 'No Asset Holding',
     content:
       "We don't hold your assets - we directly convert your crypto into your chosen bank account in any of our supported cashout countries.",
   },
@@ -72,15 +77,15 @@ const LeftSide = shallowRef([
 const RightSide = shallowRef([
   {
     icon: TransparentIcon,
-    title: "Transparent Pricing",
+    title: 'Transparent Pricing',
     content:
-      "Our pricing model is simple and transparent, with no hidden fees or charges.",
+      'Our pricing model is simple and transparent, with no hidden fees or charges.',
   },
   {
     icon: GlobeIcon,
-    title: "Remittance Solution",
+    title: 'Remittance Solution',
     content:
-      "Our platform can also serve as a remittance solution, providing fast and secure transfers at competitive rates.",
+      'Our platform can also serve as a remittance solution, providing fast and secure transfers at competitive rates.',
   },
 ]);
 </script>
