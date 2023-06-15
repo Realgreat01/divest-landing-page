@@ -1,6 +1,6 @@
 <template>
   <div
-    class="z-50 sticky top-0 grid h-[9.6rem] w-full grid-cols-[1fr,2fr,1fr] items-center gap-x-[3rem] bg-[#0D1912] px-medium-lite"
+    class="sticky top-0 z-50 grid h-[9.6rem] w-full grid-cols-[1fr,2fr,1fr] items-center gap-x-[3rem] bg-[#0D1912] px-medium-lite"
   >
     <LogoPlain />
     <div class="flex items-center justify-center gap-x-medium">
@@ -16,21 +16,23 @@
     <div
       class="ml-auto flex w-fit justify-end rounded-light border border-brand-600 px-medium-lite py-thin font-bold text-brand hover:bg-brand hover:text-white"
     >
-      <ButtonComponent class="">Contact Us</ButtonComponent>
+      <ButtonComponent class="">
+        <a href="#contact-us">Contact Us</a>
+      </ButtonComponent>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import LogoPlain from "@/icons/LogoWhite.vue";
-import { ref } from "vue";
-import ButtonComponent from "./resuables/ButtonComponent.vue";
+import LogoPlain from '@/icons/LogoWhite.vue';
+import { ref } from 'vue';
+import ButtonComponent from './resuables/ButtonComponent.vue';
 
 const NavActions = ref([
-  { title: "About", route: "#about" },
-  { title: "Key Features", route: "#key-features" },
-  { title: "Use Cases", route: "#use-cases" },
-  { title: "FAQs", route: "#faqs" },
+  { title: 'About', route: '#about' },
+  { title: 'Key Features', route: '#key-features' },
+  { title: 'Use Cases', route: '#use-cases' },
+  { title: 'FAQs', route: '#faqs' },
 ]);
 </script>
 

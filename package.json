@@ -21,6 +21,7 @@
     "sass": "^1.63.3",
     "vee-validate": "^4.9.6",
     "vue": "^3.3.4",
+    "vue-m-message": "^4.0.2",
     "yup": "^1.2.0"
   },
   "devDependencies": {

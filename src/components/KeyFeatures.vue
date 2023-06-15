@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-small-lite text-dark md:p-medium md:pt-[9.6rem]"
+    class="p-small-lite pt-[5rem] text-dark md:p-medium md:pt-[9.6rem]"
     id="key-features"
   >
     <div class="w-full md:mx-auto md:my-medium md:w-1/2 md:text-center">

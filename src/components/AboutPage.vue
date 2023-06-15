@@ -3,8 +3,8 @@
     id="about"
     class="grid max-h-[85rem] min-h-[50rem] w-full items-center justify-around bg-[#F1F9F9] px-small-lite py-medium md:grid-cols-2 md:px-medium md:pt-[9.6rem]"
   >
-    <div class="w-4/5">
-      <!-- <img src="../assets/about-icon.png" alt="" class="" /> -->
+    <div class="max-w-4/5">
+      <img src="../assets/about-icon.png" alt="" class="" />
     </div>
     <div class="text-dark">
       <h2 class="mt-small text-[3.6rem] font-bold md:mt-0">About Divest</h2>

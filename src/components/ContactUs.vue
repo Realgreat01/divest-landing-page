@@ -1,5 +1,5 @@
 <template>
-  <div class="relative mt-medium">
+  <div class="relative mt-medium" id="contact-us">
     <div class="grid h-[42rem] bg-brand p-medium md:grid-cols-2">
       <div class="">
         <h1 class="text-medium font-bold">Contact Us</h1>
@@ -89,13 +89,14 @@
 import ContactUsIcon from '@/icons/ContactUsIcon.vue';
 import { ErrorMessage, Field, Form as VeeForm } from 'vee-validate';
 import { ref } from 'vue';
+import Message from 'vue-m-message';
 import ButtonComponent from './resuables/ButtonComponent.vue';
-
 // import axios from '@/axios';
 import * as Yup from 'yup';
 
 const SEND_MESSAGE = async (field: object) => {
   //   try {
+  Message.success('Feedback sent successfully');
   //     await axios.post('/home/contact', field);
   //     toast.SwiftToast('success', 'Message sent successfully');
   //   } catch (error) {
