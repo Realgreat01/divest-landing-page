@@ -1,15 +1,22 @@
 <template>
-  <div class="relative mt-medium" id="contact-us">
-    <div class="grid h-[42rem] bg-brand p-medium md:grid-cols-2">
+  <div class="relative pt-[9rem]" id="contact-us">
+    <div
+      class="relative grid h-[42rem] bg-brand p-small md:grid-cols-2 md:p-medium"
+    >
       <div class="">
-        <h1 class="text-medium font-bold">Contact Us</h1>
+        <h1 class="mb-normal-lite text-medium-lite font-bold md:text-medium">
+          Contact Us
+        </h1>
         <p class="mb-0 md:max-w-[70%]">
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id es. sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id es
+          We value your feedback and inquiries. Feel free to reach out to us
+          with any questions, concerns, or suggestions you may have regarding
+          our services. Your input is important to us as we continuously strive
+          to improve and provide you with the best experience possible.
         </p>
       </div>
-      <ContactUsIcon class="w-[32rem] md:w-[50rem]" />
+      <ContactUsIcon
+        class="absolute top-[45%] w-[32rem] md:relative md:w-[50rem]"
+      />
     </div>
     <div class="bg-white py-medium text-dark md:h-[42rem]">
       <div
@@ -17,7 +24,7 @@
       >
         <VeeForm
           v-slot="{ handleSubmit, isSubmitting, errors }"
-          class="w-4/5 rounded-thin border bg-white px-thin py-medium-lite md:w-1/2 md:px-[3.2rem] md:py-[4.8rem]"
+          class="w-[90%] rounded-thin border bg-white px-thin py-medium-lite md:w-1/2 md:px-[3.2rem] md:py-[4.8rem]"
         >
           <form
             @submit.prevent="handleSubmit($event, SEND_MESSAGE)"
@@ -86,23 +93,23 @@
 </template>
 
 <script setup lang="ts">
+import axios from '@/axios';
 import ContactUsIcon from '@/icons/ContactUsIcon.vue';
 import { ErrorMessage, Field, Form as VeeForm } from 'vee-validate';
 import { ref } from 'vue';
 import Message from 'vue-m-message';
-import ButtonComponent from './resuables/ButtonComponent.vue';
-// import axios from '@/axios';
 import * as Yup from 'yup';
+import ButtonComponent from './resuables/ButtonComponent.vue';
 
 const SEND_MESSAGE = async (field: object) => {
-  //   try {
-  Message.success('Feedback sent successfully');
-  //     await axios.post('/home/contact', field);
-  //     toast.SwiftToast('success', 'Message sent successfully');
-  //   } catch (error) {
-  //     toast.SwiftToast('error', 'Error sending message');
-  //     console.log(error);
-  //   }
+  try {
+    console.log(field);
+    await axios.post('/settings/contact-us', field);
+    Message.success('Feedback sent successfully');
+  } catch (error) {
+    Message.error('Error sending message');
+    console.log(error);
+  }
 };
 
 const detailsForm = ref([
@@ -129,7 +136,7 @@ const contactForm = ref([
     as: 'textarea',
     rules: Yup.string()
       .required('Message is required')
-      .min(24, 'Message is too short'),
+      .min(24, 'Message is too short, Kindly enter at least 20 characters!'),
   },
 ]);
 </script>

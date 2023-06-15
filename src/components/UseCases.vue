@@ -1,10 +1,12 @@
 <template>
   <div
-    class="bg-[#F2FAFA] p-small-lite py-medium pt-[9.6rem] text-dark md:p-medium"
+    class="bg-[#F2FAFA] p-small-lite py-medium pt-[9.6rem] text-dark md:p-medium md:pt-[9.6rem]"
     id="use-cases"
   >
     <div class="md:mx-auto md:w-3/5 md:text-center">
-      <h2 class="text-small font-bold">Use Cases</h2>
+      <h2 class="text-center text-small font-bold text-dark md:text-[3.6rem]">
+        Use Cases
+      </h2>
       <p class="my-thin w-full">
         At Divest, we believe that financial empowerment should be accessible to
         both individuals and businesses alike. That's why our platform is

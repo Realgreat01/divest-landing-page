@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="faqs h-fit w-full bg-white pt-small-lite text-dark md:min-h-[97rem] md:pt-[10.1rem]"
-    id="faqs"
-  >
+  <div class="faqs h-fit w-full bg-white pt-[9.6rem] text-dark" id="faqs">
     <div class="mx-auto md:w-[51.1rem]">
       <h2 class="text-center text-small font-bold text-dark md:text-[3.6rem]">
         FAQs
@@ -16,6 +13,8 @@
         class="mt-small flex flex-col justify-between overflow-hidden rounded-thin bg-white bg-none"
         v-for="(faq, index) in Faqs"
         :key="index"
+        ref="summaries"
+        @click="closeOpenedDetails"
       >
         <summary
           class="grid w-full cursor-pointer grid-cols-[90%,5%] items-start justify-between gap-x-10 rounded-[5rem] bg-white p-medium-lite py-[1.2rem] shadow-sm shadow-brand-50 md:px-[5rem]"
@@ -44,39 +43,47 @@ import PlusIcon from '@/icons/PlusIcon.vue';
 import { ref } from 'vue';
 const Faqs = ref([
   {
-    question: 'What is Divest ?',
-    answer: `Divest is a financial services company that offers businesses and individuals 
-    access to global banking services, including virtual accounts in multiple currencies,
-     global transfer services, and forex services`,
+    question: 'What cryptocurrencies do you support ?',
+    answer:
+      'We support a wide range of cryptocurrencies, including Bitcoin and UDST',
   },
   {
-    question: ' What currencies does Divest support ?',
-    answer: `Divest offers virtual accounts in GBP, USD, NGN, and EUR, 
-      and supports global transfers in over 50 currencies.`,
+    question: 'What countries do you support for cashouts ?',
+    answer:
+      'We support cashouts to bank accounts and mobile wallet in a number of countries including Nigeria, Ghana, South Africa, Kenya and Rwanda',
   },
   {
-    question: 'How long does it take to transfer money with Divest ?',
-    answer: `Transfers with Divest are typically completed within 1-3 business days, depending on the destination and currency.`,
+    question: 'How long does it take to convert crypto to cash ?',
+    answer:
+      'Our platform can convert your crypto to cash in 100 seconds or less.',
   },
   {
-    question: ' How secure is Divest ?',
-    answer: `Divest prioritizes security and reliability, using cutting-edge 
-    technology and partnering with reputable financial institutions to ensure
-     customer data and transactions are protected.`,
+    question: 'Do you hold assets during the conversion process ?',
+    answer:
+      "No, we don't hold your assets. We directly convert your crypto into your chosen bank account.",
   },
   {
-    question: 'What are the fees for using Divest ?',
-    answer: `Divest offers competitive exchange rates and zero transfer fees for global transfers. Fees for virtual accounts and other services are available on our website and may vary by currency and service.`,
+    question: 'Are your fees transparent ?',
+    answer:
+      'Yes, our pricing model is simple and transparent, with no hidden fees or charges.',
   },
   {
-    question: 'What kind of customer support does Divest offer ?',
-    answer: `Divest offers dedicated customer support via email, phone, and chat, available during business hours. Our support team is ready to assist with any questions or concerns.`,
-  },
-  {
-    question: 'Can Divest be used to transfer money to suppliers overseas ?',
-    answer: ` Divest can be used to transfer money to suppliers overseas. Divest offers global cross currency transfer and forex transfer services, allowing businesses to send payments to suppliers and partners around the world.`,
+    question: 'Is your platform compliant with regulations ?',
+    answer:
+      'Yes, our platform is fully compliant with all relevant regulations, giving you peace of mind when using our service.',
   },
 ]);
+
+const summaries = ref<HTMLDetailsElement[] | null[]>([]);
+function closeOpenedDetails(event: Event) {
+  summaries.value.forEach((summary) => {
+    if (!summary) return;
+
+    if (summary !== event.currentTarget) {
+      summary.removeAttribute('open');
+    }
+  });
+}
 </script>
 
 <style scoped lang="scss">

@@ -2,8 +2,8 @@
   <div
     class="sticky top-0 z-50 grid h-[9.6rem] w-full grid-cols-[1fr,2fr,1fr] items-center gap-x-[3rem] bg-[#0D1912] px-medium-lite"
   >
-    <LogoPlain />
-    <div class="flex items-center justify-center gap-x-medium">
+    <LogoPlain class="w-[18rem]" />
+    <div class="mx-auto flex items-center justify-center gap-x-medium">
       <a
         class="text-[1.6rem] text-white hover:font-bold hover:text-brand"
         v-for="(route, index) in NavActions"

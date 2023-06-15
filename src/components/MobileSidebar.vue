@@ -4,7 +4,7 @@
       v-if="!showModal"
       class="z-50 flex h-[9.6rem] w-full items-center justify-between overflow-hidden px-thin py-small duration-[1500ms]"
     >
-      <LogoPlain class="w-[12rem]" />
+      <LogoPlain class="w-[10rem]" />
       <MenuIcon @click="showModal = !showModal" />
     </div>
 
@@ -16,7 +16,7 @@
         <div
           class="mb-[4rem] flex h-[9.6rem] w-full items-center justify-between"
         >
-          <LogoPlain class="w-[12rem]" />
+          <LogoPlain class="block w-[12rem]" />
           <CancelIcon class="w-10 duration-500" @click="showModal = false" />
         </div>
         <div class="my-medium flex flex-col gap-y-small-lite text-small">
@@ -49,6 +49,7 @@ const NavActions = ref([
   { title: 'Key Features', route: '#key-features' },
   { title: 'Use Cases', route: '#use-cases' },
   { title: 'FAQs', route: '#faqs' },
+  { title: 'Contact Us', route: '#contact-us' },
 ]);
 
 watchEffect(() => {

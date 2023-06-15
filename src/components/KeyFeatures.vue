@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-small-lite pt-[5rem] text-dark md:p-medium md:pt-[9.6rem]"
+    class="p-small-lite pt-[9.6rem] text-dark md:p-medium md:pt-[9.6rem]"
     id="key-features"
   >
     <div class="w-full md:mx-auto md:my-medium md:w-1/2 md:text-center">
@@ -9,7 +9,9 @@
         Divest has amazing features to enable your transactions seamless and
         stress free across the globe.
       </p>
-      <AppDownload />
+      <div class="flex w-full items-center justify-center">
+        <AppDownload />
+      </div>
     </div>
     <div
       class="m-normal-lite my-medium grid text-dark md:my-small md:grid-cols-3"

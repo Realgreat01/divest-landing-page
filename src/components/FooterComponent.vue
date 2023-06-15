@@ -1,7 +1,7 @@
 <template>
   <div class="grid bg-dark p-medium md:h-[40rem] md:grid-cols-[2fr,1.25fr,2fr]">
     <div class="flex flex-col gap-small">
-      <LogoWhite />
+      <LogoWhite class="w-2/5" />
       <p class="md:max-w-[70%]">
         Divest simplifies the process of transferring funds. With just a few
         clicks, you can initiate a transaction and witness the power of instant
@@ -95,12 +95,12 @@ const contactInformation = shallowRef([
   },
   {
     icon: LocationIcon,
-    contact: '32 Billionaire Street Lekki Phase II Lagos',
+    contact: 'Suite R, 8 the green, Dover, DE 19901',
     class: 'fill-white',
     action: (): void => {
       window.location.href =
         'https://www.google.com/maps/search/' +
-        encodeURIComponent('32 Billionaire Street Lekki Phase II Lagos');
+        encodeURIComponent('Suite R, 8 the green, Dover, DE 19901');
     },
   },
 ]);
