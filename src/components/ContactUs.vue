@@ -104,7 +104,7 @@ import ButtonComponent from './resuables/ButtonComponent.vue';
 const SEND_MESSAGE = async (field: object) => {
   try {
     console.log(field);
-    await axios.post('/settings/contact-us', field);
+    await axios.post('/setting/contact-us', field);
     Message.success('Feedback sent successfully');
   } catch (error) {
     Message.error('Error sending message');
