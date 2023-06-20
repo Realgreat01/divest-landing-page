@@ -17,7 +17,7 @@
         @click="closeOpenedDetails"
       >
         <summary
-          class="grid w-full cursor-pointer grid-cols-[90%,5%] items-start justify-between gap-x-10 rounded-[5rem] bg-white p-medium-lite py-[1.2rem] shadow-sm shadow-brand-50 md:px-[5rem]"
+          class="marker-hidden grid w-full cursor-pointer grid-cols-[90%,5%] items-start justify-between gap-x-10 rounded-[5rem] bg-white p-medium-lite py-[1.2rem] shadow-sm shadow-brand-50 md:px-[5rem]"
         >
           <span class="block">{{ faq.question }}</span>
           <PlusIcon
@@ -109,6 +109,9 @@ details[open] {
 details {
   box-shadow: 0px 16px 22px rgba(0, 0, 0, 0.05);
   summary::marker {
+    display: none;
+  }
+  summary::-webkit-details-marker {
     display: none;
   }
   .summary-icon-plus {
