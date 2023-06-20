@@ -108,6 +108,9 @@ details[open] {
 
 details {
   box-shadow: 0px 16px 22px rgba(0, 0, 0, 0.05);
+  summary::marker {
+    display: none;
+  }
   .summary-icon-plus {
     @apply block;
   }
