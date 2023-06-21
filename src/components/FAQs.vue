@@ -1,9 +1,7 @@
 <template>
   <div class="faqs h-fit w-full bg-white pt-[9.6rem] text-dark" id="faqs">
     <div class="mx-auto md:w-[51.1rem]">
-      <h2 class="text-center text-small font-bold text-dark md:text-[3.6rem]">
-        FAQs
-      </h2>
+      <h2 class="text-center text-[3.6rem] font-bold text-dark">FAQs</h2>
       <p class="mx-[6rem] mb-[4.8rem] mt-4 text-center">
         Here are some frequently asked questions
       </p>

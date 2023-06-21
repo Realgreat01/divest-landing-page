@@ -1,7 +1,9 @@
 <template>
   <div class="bg-brand-900 pt-medium">
     <div class="bg-[#09231A] p-medium">
-      <h2 class="text-center text-small font-bold">Supported Currencies</h2>
+      <h2 class="text-center text-small-lite font-bold md:text-small">
+        Supported payout Currencies
+      </h2>
       <div
         class="mx-auto my-small flex w-fit items-center justify-center gap-x-small md:gap-x-[8rem]"
       >

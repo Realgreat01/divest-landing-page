@@ -4,10 +4,12 @@
     id="use-cases"
   >
     <div class="md:mx-auto md:w-3/5 md:text-center">
-      <h2 class="text-center text-small font-bold text-dark md:text-[3.6rem]">
+      <h2
+        class="text-medium-lite font-bold text-dark md:text-center md:text-[3.6rem]"
+      >
         Use Cases
       </h2>
-      <p class="my-thin w-full">
+      <p class="my-thin w-full md:mx-auto md:w-4/5">
         At Divest, we believe that financial empowerment should be accessible to
         both individuals and businesses alike. That's why our platform is
         designed to cater to the unique needs of every user, providing seamless
@@ -16,7 +18,7 @@
     </div>
 
     <div
-      class="mx-auto my-medium-lite flex w-full justify-between gap-small-lite rounded-thin bg-white p-thin md:w-fit"
+      class="mx-auto my-medium-lite flex w-full justify-between gap-small-lite rounded-thin bg-white p-1 md:w-fit"
     >
       <div
         class="w-full rounded-thin px-normal-lite py-[1.2rem] duration-1000 md:w-[19rem] md:px-medium-lite"
@@ -32,9 +34,9 @@
     </div>
 
     <div
-      class="mx-auto grid items-center gap-small duration-1000 md:w-4/5 md:grid-cols-2 md:gap-0"
+      class="mx-auto grid items-center gap-small duration-1000 md:w-4/5 md:grid-cols-2 md:gap-x-medium"
     >
-      <img :src="activeUsecase.image" alt="" class="block" />
+      <img :src="activeUsecase.image" alt="" class="block w-full" />
       <div class="flex flex-col gap-medium-lite">
         <div
           v-for="(usecase, index) in activeUsecase.usecases"
@@ -44,7 +46,7 @@
           <h2 class="text-small-lite font-bold text-brand-900">
             {{ usecase.title }}
           </h2>
-          <h2 class="">{{ usecase.content }}</h2>
+          <h2 class="md:w-[95%]">{{ usecase.content }}</h2>
         </div>
       </div>
     </div>
@@ -55,7 +57,7 @@
 import { computed, ref } from 'vue';
 import ButtonComponent from './resuables/ButtonComponent.vue';
 const currentIndex = ref(0);
-const buttons = ref(['For Individuals', 'For Company']);
+const buttons = ref(['For Individuals', 'For Businesses']);
 const UseCases = ref([
   {
     image: 'individual-use-case.png',

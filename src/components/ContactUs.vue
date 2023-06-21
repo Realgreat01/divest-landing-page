@@ -1,7 +1,7 @@
 <template>
   <div class="relative pt-[9rem]" id="contact-us">
     <div
-      class="relative grid h-[42rem] bg-brand p-small md:grid-cols-2 md:p-medium"
+      class="relative grid h-[32rem] bg-brand p-small md:h-[42rem] md:grid-cols-2 md:p-medium"
     >
       <div class="">
         <h1 class="mb-normal-lite text-medium-lite font-bold md:text-medium">
@@ -15,12 +15,12 @@
         </p>
       </div>
       <ContactUsIcon
-        class="absolute top-[45%] w-[32rem] md:relative md:w-[50rem]"
+        class="absolute bottom-[-30%] right-medium w-[32rem] md:relative md:ml-auto md:w-[50rem]"
       />
     </div>
     <div class="bg-white py-medium text-dark md:h-[42rem]">
       <div
-        class="left-1/2 top-1/2 flex w-full transform justify-center md:absolute md:mt-[10rem] md:-translate-x-1/2 md:-translate-y-1/2"
+        class="left-1/2 top-1/2 flex w-full transform justify-center md:absolute md:mt-[15rem] md:-translate-x-1/2 md:-translate-y-1/2"
       >
         <VeeForm
           v-slot="{ handleSubmit, isSubmitting, errors }"

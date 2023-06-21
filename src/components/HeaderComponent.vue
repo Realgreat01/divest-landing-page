@@ -1,9 +1,9 @@
 <template>
   <div
-    class="sticky top-0 z-50 grid h-[9.6rem] w-full grid-cols-[1fr,2fr,1fr] items-center gap-x-[3rem] bg-[#0D1912] px-medium-lite"
+    class="sticky top-0 z-50 flex h-[9.6rem] w-full grid-cols-[1fr,1fr,1fr] justify-between items-center gap-x-[3rem] bg-[#0D1912] px-medium-lite"
   >
-    <LogoPlain class="w-[18rem]" />
-    <div class="mx-auto flex items-center justify-center gap-x-medium">
+    <LogoPlain class="w-[18rem] block" />
+    <div class=" flex items-center justify-center gap-x-medium">
       <a
         class="text-[1.6rem] text-white hover:font-bold hover:text-brand"
         v-for="(route, index) in NavActions"
@@ -14,7 +14,7 @@
       </a>
     </div>
     <div
-      class="ml-auto flex w-fit justify-end rounded-light border border-brand-600 px-medium-lite py-thin font-bold text-brand hover:bg-brand hover:text-white"
+      class="flex w-fit justify-end rounded-light border border-brand-600 px-medium-lite py-thin font-bold text-brand hover:bg-brand hover:text-white"
     >
       <ButtonComponent class="">
         <a href="#contact-us">Contact Us</a>

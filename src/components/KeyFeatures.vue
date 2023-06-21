@@ -5,7 +5,7 @@
   >
     <div class="w-full md:mx-auto md:my-medium md:w-1/2 md:text-center">
       <h2 class="text-[3.6rem] font-bold">Key Features</h2>
-      <p class="my-small">
+      <p class="my-small w-4/5 md:mx-auto">
         Divest has amazing features to enable your transactions seamless and
         stress free across the globe.
       </p>
@@ -14,9 +14,9 @@
       </div>
     </div>
     <div
-      class="m-normal-lite my-medium grid text-dark md:my-small md:grid-cols-3"
+      class="m-normal-lite my-medium grid gap-x-[10rem] text-dark md:my-small md:grid-cols-3"
     >
-      <div class="order-2 w-[80%] md:order-1">
+      <div class="order-2 md:order-1">
         <div
           class="mb-small flex flex-col gap-3"
           v-for="(feature, index) in LeftSide"
@@ -31,11 +31,11 @@
           <h2 class="">{{ feature.content }}</h2>
         </div>
       </div>
-      <div class="order-1 mx-auto block w-4/5 md:order-2 md:w-full">
-        <img src="../assets/key-features.png" alt="" />
+      <div class="order-1 mx-auto block md:order-2 md:w-full">
+        <img src="../assets/key-features.png" alt="" class="w-full" />
       </div>
 
-      <div class="order-3 w-[80%] md:ml-auto">
+      <div class="order-3">
         <div
           class="mb-small ml-auto flex flex-col gap-3 justify-self-end"
           v-for="(feature, index) in RightSide"

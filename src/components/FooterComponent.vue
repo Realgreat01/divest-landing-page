@@ -1,8 +1,10 @@
 <template>
-  <div class="grid bg-dark p-medium md:h-[40rem] md:grid-cols-[2fr,1.25fr,2fr]">
+  <div
+    class="grid bg-dark-900 p-medium pt-[8rem] md:h-[40rem] md:grid-cols-[2fr,1.25fr,2fr]"
+  >
     <div class="flex flex-col gap-small">
       <LogoWhite class="w-2/5" />
-      <p class="md:max-w-[70%]">
+      <p class="md:max-w-[90%]">
         Divest simplifies the process of transferring funds. With just a few
         clicks, you can initiate a transaction and witness the power of instant
         conversion.
@@ -18,28 +20,28 @@
         </a>
       </div>
     </div>
-    <div class="">
+    <div class="md:mx-auto">
       <h2
         class="mb-small-lite mt-20 text-small font-semibold text-white md:mb-10 md:mt-0"
       >
         Quick Links
       </h2>
       <h2
-        class="mb-small cursor-pointer text-normal font-light"
+        class="mb-small cursor-pointer text-normal font-light hover:text-brand"
         v-for="(link, index) in quickLinks"
         :key="index"
       >
         <a :href="link.route" class="">{{ link.title }}</a>
       </h2>
     </div>
-    <div class="">
+    <div class="ml-auto">
       <h2
         class="mb-small-lite mt-20 text-small font-semibold text-white md:mb-10 md:mt-0"
       >
         Contact Details
       </h2>
       <div
-        class="mt-4 grid grid-cols-[10%,90%] items-center gap-x-6"
+        class="mt-4 flex items-center gap-x-4"
         v-for="(contact, index) in contactInformation"
         :key="index"
       >

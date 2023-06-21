@@ -1,12 +1,13 @@
 <template>
   <div
-    class="main-landing-page md:min-h-70vh grid min-h-[88vh] w-full items-center justify-center px-small-lite pb-medium md:grid-cols-2 md:px-medium"
+    class="main-landing-page md:min-h-70vh grid min-h-[88vh] w-full items-center justify-between gap-small px-small pb-medium md:grid-cols-2 md:px-medium"
   >
     <div class="pt-medium md:pt-0">
       <p class="text-[4rem] font-bold md:text-[6.4rem]">
         Instant
         <span class="text-brand">Crypto</span>
         to
+        <br class="hidden md:block" />
         <span class="text-brand">Cash</span>
         Converter
       </p>
@@ -16,11 +17,11 @@
       </p>
       <AppDownload />
     </div>
-    <div class="mx-auto">
+    <div class="">
       <img
         src="../assets/landing-page-phone.png"
         alt=""
-        class="block w-fit md:ml-auto md:w-[45rem]"
+        class="block w-fit md:ml-auto md:w-[62rem]"
       />
     </div>
   </div>
