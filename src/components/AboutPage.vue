@@ -9,7 +9,7 @@
         alt=""
         class="absolute right-10 top-10 block w-20 md:right-40"
       /> -->
-      <img src="../assets/about-icon.svg" alt="" class="block w-full" />
+      <img src="../assets/about-icon.png" alt="" class="block w-full" />
     </div>
     <div class="text-dark" id="about">
       <h2 class="mt-small text-[3.6rem] font-bold md:mt-0">About Divest</h2>

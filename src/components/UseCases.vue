@@ -36,7 +36,8 @@
     <div
       class="mx-auto grid items-center gap-small duration-1000 md:w-4/5 md:grid-cols-2 md:gap-x-medium"
     >
-      <img :src="activeUsecase.image" alt="" class="block w-full" />
+      <img :src="activeUsecase.image_desktop" alt="" class="hidden md:block w-full" />
+      <img :src="activeUsecase.image_mobile" alt="" class="block md:hidden w-full" />
       <div class="flex flex-col gap-medium-lite">
         <div
           v-for="(usecase, index) in activeUsecase.usecases"
@@ -60,7 +61,8 @@ const currentIndex = ref(0);
 const buttons = ref(['For Individuals', 'For Businesses']);
 const UseCases = ref([
   {
-    image: 'individual-use-case.png',
+    image_mobile: 'mobile-individual-usecase.png',
+    image_desktop: 'individual-use-case.png',
     usecases: [
       {
         title: 'Unlock the Value of Your Cryptocurrencies',
@@ -75,7 +77,8 @@ const UseCases = ref([
     ],
   },
   {
-    image: 'company-use-case.png',
+    image_mobile: 'mobile-company-usecase.png',
+    image_desktop: 'company-use-case.png',
     usecases: [
       {
         title: 'Seamless Cash Flow Management',
