@@ -3,7 +3,7 @@
     class="grid bg-dark-900  px-small-lite py-medium md:p-medium pt-[8rem] md:h-[40rem] md:grid-cols-[2fr,1.25fr,2fr]"
   >
     <div class="flex flex-col gap-small">
-      <LogoWhite class="w-2/5" />
+      <LogoWhite class="w-[10rem] md:w-2/5" />
       <p class="md:max-w-[90%]">
         Divest simplifies the process of transferring funds. With just a few
         clicks, you can initiate a transaction and witness the power of instant
