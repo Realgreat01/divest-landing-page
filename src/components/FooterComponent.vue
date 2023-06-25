@@ -34,7 +34,7 @@
         <a :href="link.route" class="">{{ link.title }}</a>
       </h2>
     </div>
-    <div class="ml-auto">
+    <div class="md:ml-auto">
       <h2
         class="mb-small-lite mt-20 text-small font-semibold text-white md:mb-10 md:mt-0"
       >
