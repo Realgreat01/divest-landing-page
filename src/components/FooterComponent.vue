@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid bg-dark-900 p-medium pt-[8rem] md:h-[40rem] md:grid-cols-[2fr,1.25fr,2fr]"
+    class="grid bg-dark-900  px-small-lite py-medium md:p-medium pt-[8rem] md:h-[40rem] md:grid-cols-[2fr,1.25fr,2fr]"
   >
     <div class="flex flex-col gap-small">
       <LogoWhite class="w-2/5" />
