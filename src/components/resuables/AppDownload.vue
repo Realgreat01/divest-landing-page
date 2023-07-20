@@ -21,7 +21,7 @@ import AppstoreIcon from '@/icons/AppstoreIcon.vue';
 import PlayStoreIcon from '@/icons/PlaystoreIcon.vue';
 import { shallowRef } from 'vue';
 const DownloadLinks = shallowRef([
-  { icon: PlayStoreIcon, phone: 'Android', link: '' },
-  { icon: AppstoreIcon, phone: 'IPhone', link: '' },
+  { icon: PlayStoreIcon, phone: 'Android', link: 'https://play.google.com/store/apps/details?id=com.divest.app' },
+  { icon: AppstoreIcon, phone: 'IPhone', link: 'https://apps.apple.com/us/app/divest/id6450185584?platform=iphone' },
 ]);
 </script>
